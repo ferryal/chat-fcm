@@ -158,15 +158,20 @@ body {
     margin-right: -480px; }
   100% {
     margin-right: 0; } }
+body {
+  text-align: center; }
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  color: white; }
+
 label {
   font-family: "Bellefair", serif;
-  font-size: 20px; }
+  font-size: 20px;
+  color: white; }
 
 input {
   font-family: "Quicksand", sans-serif; }
-
-body {
-  text-align: center; }
 
 button:hover {
   color: grey; }
