@@ -1,3 +1,14 @@
+ // Imports
+ // --------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Bellefair|Quicksand');
+
+// Variables
+// --------------------------------------
+$scrollbar-width:              10px;
+$chat-thread-bgd-color:        rgba(25,147,147,0.2);
+$chat-thread-msg-arrow-size:   15px;
+$chat-thread-avatar-size:      50px;
+$chat-thread-offset:           #{$chat-thread-avatar-size + 30px};
 $font-quicksand : 'Quicksand', sans-serif;
 $font-bellefair : 'Bellefair', serif;
 $font-medium : 20px;
@@ -7,6 +18,7 @@ $list-none: none;
 $font-white: white;
 
 //@extend ;
+// --------------------------------------
 %ul-style {
   font-family: $font-bellefair;
   font-size: $font-medium;
@@ -23,9 +35,24 @@ $font-white: white;
   letter-spacing: 1px;
   font-size: 15px;
   cursor: pointer;
-  background-color: #f16051;
+  background-color: #c44569;
   color: #fff;
-  font-weight: 100;
+  font-weight: 50;
+}
+
+%button-chat-hover {
+  border: 0;
+  margin-top: 10px;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 2px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #B33771;
+  color: #fff;
+  font-weight: 50;
 }
 
 %style-body {
@@ -36,203 +63,28 @@ $font-white: white;
 	background-repeat: no-repeat;
   background-attachment: fixed;
 }
-//@mixin
 
-
-// Imports
-// --------------------------------------
-@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
-
-// Variables
-// --------------------------------------
-$scrollbar-width:              10px;
-$chat-thread-bgd-color:        rgba(25,147,147,0.2);
-$chat-thread-msg-arrow-size:   15px;
-$chat-thread-avatar-size:      50px;
-$chat-thread-offset:           #{$chat-thread-avatar-size + 30px};
-
-
-
-::-webkit-scrollbar {
-    width: $scrollbar-width;
+%form-container {
+  padding-top: 50px;
+  padding-left: 20px;
 }
 
-::-webkit-scrollbar-track {
-    border-radius: $scrollbar-width;
-    background-color: rgba(25,147,147,0.1);
+%input-text {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #c44569;
+  width: 30%;
+  padding-bottom: 4px;
+  color: #fff !important;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+  outline: none;
 }
 
-::-webkit-scrollbar-thumb {
-     border-radius: $scrollbar-width;
-    background-color: $chat-thread-bgd-color;
-}
-
-.chat-thread {
-	margin: 24px auto 0 auto;
-	padding: 0 20px 0 0;
-	list-style: none;
-	overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-.chat-thread li {
-	position: relative;
-	clear: both;
-	display: inline-block;
-	padding: 16px 40px 16px 20px;
-	margin: 0 0 20px 0;
-	font: 16px/20px 'Noto Sans', sans-serif;
-	border-radius: 10px;
-	background-color: $chat-thread-bgd-color;
-}
-
-/* Chat - Avatar */
-.chat-thread li:before {
-	position: absolute;
-	top: 0;
-	width: $chat-thread-avatar-size;
-	height: $chat-thread-avatar-size;
-	border-radius: $chat-thread-avatar-size;
-	content: '';
-}
-
-/* Chat - Speech Bubble Arrow */
-.chat-thread li:after {
-	position: absolute;
-  top: $chat-thread-msg-arrow-size;
-	content: '';
-	width: 0;
-	height: 0;
-	border-top: $chat-thread-msg-arrow-size solid $chat-thread-bgd-color;
-}
-
-.chat-thread li:nth-child(odd) {
-	animation: show-chat-odd 0.15s 1 ease-in;
-	-moz-animation: show-chat-odd 0.15s 1 ease-in;
-	-webkit-animation: show-chat-odd 0.15s 1 ease-in;
-	float: right;
-	margin-right: $chat-thread-offset;
-	color: #0AD5C1;
-}
-
-
-
-.chat-thread li:nth-child(odd):after {
-	border-right: $chat-thread-msg-arrow-size solid transparent;
-	right: -$chat-thread-msg-arrow-size;
-}
-
-.chat-thread li:nth-child(even) {
-	animation: show-chat-even 0.15s 1 ease-in;
-	-moz-animation: show-chat-even 0.15s 1 ease-in;
-	-webkit-animation: show-chat-even 0.15s 1 ease-in;
-	float: left;
-	margin-left: $chat-thread-offset;
-	color: #0EC879;
-}
-
-
-.chat-thread li:nth-child(even):after {
-	border-left: $chat-thread-msg-arrow-size solid transparent;
-	left: -$chat-thread-msg-arrow-size;
-}
-
-.chat-window {
-	position: fixed;
-	bottom: 18px;
-}
-
-.chat-window-message {
-	width: 100%;
-	height: 48px;
-	font: 32px/48px 'Noto Sans', sans-serif;
-	background: none;
-	color: #0AD5C1;
-	border: 0;
-	border-bottom: 1px solid $chat-thread-bgd-color;
-	outline: none;
-}
-
-// A tiny bit responsive...
-// --------------------------------------
-/* Small screens */
-@media all and (max-width: 767px) {
-	.chat-thread {
-		width: 90%;
-		height: 260px;
-	}
-
-	.chat-window {
-		left: 5%;
-		width: 90%;
-	}
-}
-
-/* Medium and large screens */
-@media all and (min-width: 768px) {
-	.chat-thread {
-		width: 50%;
-		height: 320px;
-	}
-
-	.chat-window {
-		left: 25%;
-		width: 50%;
-	}
-}
-
-// Animation
-// --------------------------------------
-@keyframes show-chat-even {
-  0% {
-    margin-left: -480px;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-@-moz-keyframes show-chat-even {
-  0% {
-    margin-left: -480px;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-@-webkit-keyframes show-chat-even {
-  0% {
-    margin-left: -480px;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-@keyframes show-chat-odd {
-  0% {
-    margin-right: -480px;
-  }
-  100% {
-    margin-right: 0;
-  }
-}
-
-@-moz-keyframes show-chat-odd {
-  0% {
-    margin-right: -480px;
-  }
-  100% {
-    margin-right: 0;
-  }
-}
-
-@-webkit-keyframes show-chat-odd {
-  0% {
-    margin-right: -480px;
-  }
-  100% {
-    margin-right: 0;
-  }
+%input-autofill {
+  -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+  -webkit-text-fill-color: #fff !important;
 }
