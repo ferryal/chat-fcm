@@ -15,6 +15,7 @@ input {
 
 body {
   text-align: $body-center;
+  @extend %style-body;
 }
 
 button {

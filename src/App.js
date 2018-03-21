@@ -68,7 +68,7 @@ class App extends Component {
           {/* <input type="submit" /> */}
         </form>
 
-        <ul>
+        <ul className="chat-thread">
           {this.state.messages.map(message => (
             <li key={message.id}>
               {`"`}
