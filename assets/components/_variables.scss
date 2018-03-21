@@ -1,0 +1,30 @@
+$font-quicksand : 'Quicksand', sans-serif;
+$font-bellefair : 'Bellefair', serif;
+$font-medium : 20px;
+$font-small: 15px;
+$body-center: center;
+$list-none: none;
+
+//@extend ;
+%ul-style {
+  font-family: $font-bellefair;
+  font-size: $font-medium;
+  list-style-type: $list-none;
+}
+
+%button-chat {
+  border: 0;
+  margin-top: 10px;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 2px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #f16051;
+  color: #fff;
+  font-weight: 100;
+}
+
+//@mixin
