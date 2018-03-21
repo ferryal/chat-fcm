@@ -1,7 +1,7 @@
 
 ## Chat Room Firebase - Sass
 
-<!-- This project build with react & firebase cloud messaging. You can try demo by click [here](https://sosmedku.netlify.com/) -->
+This project build with react & firebase cloud messaging. You can try demo by click [here](https://chatku-ae945.firebaseapp.com/)
 
 If you want start in you locally, you can follow this steps :
 1. ``` git clone https://github.com/ferryal/chat-fcm.git ```
@@ -12,8 +12,8 @@ If you want start in you locally, you can follow this steps :
 
 
 #### Tech Stack
-1. React js
-2. Firebase
+1. Reactjs
+2. Firebase Cloud Messaging
 
 ### Styling
 1. Sass
